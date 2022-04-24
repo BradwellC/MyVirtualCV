@@ -1,0 +1,195 @@
+.logo {
+
+    padding: 15rem 0;
+
+    & img {
+        width: 650px;
+        margin: auto;
+    }
+}
+
+
+.about-me {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+
+    padding: 5rem 2rem;
+
+    background: $navy-blue;
+
+    width: 100%;
+
+    &_left {
+        margin: auto;
+        text-align: center;
+    }
+
+    &_right {
+        margin: auto;
+        padding-top: 2rem;
+        text-align: center;
+
+        & span {
+            font-weight: bold;
+        }
+    }
+
+    
+}
+
+
+
+.projects {
+    padding: 2rem 1.2rem;
+
+    &-title {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    &-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+}
+
+.work-experience {
+
+    padding: 2rem 1.2rem;
+
+    h2 {
+       text-align: center;
+    }
+
+    .card {
+
+        .card-body {
+            font-size: 1rem;
+
+            li {
+                font-size: .9rem;
+            }
+        }
+    }
+
+}
+
+.qualifications {
+    height: fit-content;
+    text-align: center;
+    padding: 10rem 1.5rem;
+
+    background: $blueviolet;
+
+    .section-title {
+        margin: 0 auto;
+    }
+
+    #accordion {
+        padding-top: 1rem;
+    }
+
+}
+
+.contact-me {
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+
+    grid-template-columns: 1fr;
+
+    padding: 2rem;
+
+    & .card {
+        width: 100%;
+        order: 1;
+    }
+    
+    & form {
+        order: 2;
+        margin-top: 1.3rem;
+    }
+    
+}
+
+@include view(phablet) {
+
+    .logo {
+
+        padding: 4rem 0;
+
+        img {
+            margin: 5.5rem auto;
+        }
+    }
+
+    .about-me {
+        grid-template-columns: repeat(2, 1fr);
+        
+        &_left {
+            margin: auto;
+        }
+
+        &_right {
+            margin: auto;
+        }
+    }
+
+    .projects {
+        margin: auto;
+            text-align: center;
+        
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .work-experience {
+
+        .section-title {
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .card {
+            width: 75%;
+        }
+    }
+
+    .contact-me {
+        gap: 2rem;
+
+        & .card {
+            grid-column: 2 / 3;
+            width: 80%;
+            order: 2;
+        }
+
+        & form {
+            grid-column: 1 / 2;
+            margin-top: 1.3rem;
+            width: 80%;
+            order: 1;
+        }
+    }
+}
+
+@include view(tablet) {
+
+    .projects {
+        
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contact-me {
+        display: flex;
+        flex-direction: row;
+    }
+}
