@@ -10,9 +10,7 @@
 
 
 .about-me {
-    display: grid;
-    display: -ms-grid;
-    display: -moz-grid;
+    @include grid();
 
     padding: 5rem 2rem;
 
@@ -41,24 +39,16 @@
 
 
 .projects {
-    padding: 2rem 1.2rem;
 
-    &-title {
-        margin: 1rem auto;
-        text-align: center;
-    }
-
-    &-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+    @include grid();
+    grid-template-columns: 1fr;
 
 }
 
 .work-experience {
 
     padding: 2rem 1.2rem;
+    background-color: $dark-blue;
 
     h2 {
        text-align: center;
@@ -139,13 +129,7 @@
     }
 
     .projects {
-        margin: auto;
-            text-align: center;
-        
-        &-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .work-experience {
@@ -181,11 +165,7 @@
 @include view(tablet) {
 
     .projects {
-        
-        &-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .contact-me {
