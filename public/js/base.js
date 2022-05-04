@@ -31,11 +31,11 @@ function closeModal() {
 }
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-navbarToggle.addEventListener('click', function () {
-    mobileNav.classList.add('open')
-    backdrop.classList.add('open');
+// navbarToggle.addEventListener('click', function () {
+//     mobileNav.classList.add('open')
+//     backdrop.classList.add('open');
 
-})
+// })
 
 /*  Accordion script  */
 const accordionSelector = document.querySelectorAll(".accordion");

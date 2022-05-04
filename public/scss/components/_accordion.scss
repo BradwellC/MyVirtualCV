@@ -1,6 +1,6 @@
 .accordion {
     width: 100%;
-    background-color: $grey-dark-2;
+    background-color: $navy-blue;
     text-align: center;
     border: none;
     padding: 15px 20px;
@@ -13,16 +13,17 @@
 .accordion:hover,
 .accordion:focus {
     outline: none;
-    background-color: $grey-dark-2;
+    background-color: $dark-blue;
 }
 
 .accordion-content {
-    background-color: $grey-dark;
+    background-color: $navy-blue;
     padding: 0 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
     text-align: center;
+    color: $light;
 
     p {
         padding-bottom: 15px;
@@ -51,11 +52,11 @@
             
         
             & p {
-                text-align: left;
+                text-align: center;
             }
         
             & ul {
-                text-align: left;
+                text-align: center;
             }
         }
         }

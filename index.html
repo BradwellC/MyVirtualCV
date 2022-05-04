@@ -18,11 +18,13 @@
 
   <body>
     <header>
-      <div class="navbar-brand">MyVirtualCV</div>
-
       <nav class="navbar">
-        <div class="container">
-          <ul class="navbar-nav">
+        <div class="navbar-brand">MyVirtualCV</div>
+        <button class="navbar-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navbar-nav">
+          <ul>
             <li class="navbar-item">
               <a href="#aboutme" class="navbar-link">About Me</a>
             </li>
@@ -36,43 +38,12 @@
               <a href="#qualifications" class="navbar-link">Qualifications</a>
             </li>
             <li class="navbar-item">
-              <a id="modal-btn" class="navbar-cta">Contact Me</a>
+              <a href="#" id="modal-btn" class="navbar-link">Contact Me</a>
             </li>
           </ul>
         </div>
       </nav>
-      <button class="navbar-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </button>
     </header>
-
-    <nav class="mobile-navbar">
-      <ul class="mobile-navbar_nav">
-        <li class="mobile-navbar_item">
-          <a href="#aboutme" class="mobile-navbar_link">About Me</a>
-        </li>
-
-        <li class="mobile-navbar_item">
-          <a href="#projects" class="mobile-navbar_link">Projects</a>
-        </li>
-
-        <li class="mobile-navbar_item">
-          <a href="#workexperience" class="mobile-navbar_link"
-            >Work experience</a
-          >
-        </li>
-
-        <li class="mobile-navbar_item">
-          <a href="#qualifications" class="mobile-navbar_link"
-            >Qualifications</a
-          >
-        </li>
-
-        <li class="mobile-navbar_item">
-          <a href="#modal-btn" class="mobile-navbar_link">Contact Me</a>
-        </li>
-      </ul>
-    </nav>
 
     <main>
       <div class="backdrop"></div>
@@ -143,24 +114,27 @@
       </section>
 
       <section class="projects" id="projects">
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio1.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <div class="img-text">
+              <h1>YelpCamp</h1>
               <div class="subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Numquam, ipsam.
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
 
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio2.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <!-- <div class="img-text">
               <div class="subtitle">
                 Coding bootcamp and learning management system.
               </div>
@@ -168,12 +142,12 @@
           </div>
         </div>
 
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio3.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <!-- <div class="img-text">
               <div class="subtitle">
                 Eventbrite is the leading event management platform on the web
                 with millions of individuals utilizing their applications to
@@ -183,12 +157,12 @@
           </div>
         </div>
 
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio4.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <!-- <div class="img-text">
               <div class="subtitle">
                 Eventbrite is the leading event management platform on the web
                 with millions of individuals utilizing their applications to
@@ -198,12 +172,12 @@
           </div>
         </div>
 
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio5.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <!-- <div class="img-text">
               <div class="subtitle">
                 Online tutorials and productivity tips.
               </div>
@@ -211,12 +185,12 @@
           </div>
         </div>
 
-        <div class="portfolio-item-wrapper">
+        <div class="portfolio-item">
           <div
-            class="portfolio-img-background"
+            class="portfolio-img"
             style="background-image: url(/public/img/portfolio6.jpg)"
           >
-            <!-- <div class="img-text-wrapper">
+            <!-- <div class="img-text">
               <div class="subtitle">
                 Keep track of what you learn every day.
               </div>
