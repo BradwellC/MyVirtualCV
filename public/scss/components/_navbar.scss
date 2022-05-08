@@ -1,30 +1,33 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: $dark-blue;
 
+  display: flex;
   flex-direction: column;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   &-brand {
+    padding: 1rem;
     font-size: 1.3rem;
-    margin-left: 1rem;
     color: $blueviolet;
+    text-transform: uppercase;
     font-weight: bolder;
   }
 
   &-toggle {
-    width: 3rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    vertical-align: middle;
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    width: 2rem;
 
     & i {
-      width: 100%;
       display: flex;
-      font-size: 1.3rem;
+      width: 100%;
+
+      font-size: 1.5rem;
       color: $light;
 
       &:hover {
@@ -33,39 +36,49 @@
     }
   }
 
-  &-nav ul {
+  &-nav {
+    height: 100%;
+
+    display: none;
+    flex-direction: column;
+    opacity: 0;
 
     margin: 0;
     padding: 0;
-
-    display: flex;
-    align-items: flex-start;
   }
 
   &-item {
     list-style: none;
+    align-items: center;
   }
 
   &-link {
-    text-decoration: none;
-    padding: 1rem;
     display: block;
 
+    text-decoration: none;
     color: $light;
+    padding: .5rem 1rem;
 
-  }
-
+    &:hover {
+      background-color: $blueviolet;
+    }
+  } 
 }
 
-@include view(phablet) {
+@include view(tablet) {
   .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
     &-toggle {
       display: none;
     }
 
-    &-nav ul {
+    &-nav {
       display: flex;
+      flex-direction: row;
+      opacity: 1;
     }
   }
 }

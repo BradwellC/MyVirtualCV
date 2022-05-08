@@ -25,15 +25,13 @@
     text-align: center;
     color: $light;
 
-    p {
-        padding-bottom: 15px;
-        text-align: center;
+    & p {
+        margin: auto;
+        padding-bottom: 1rem;
     }
 
-    ul {
-        list-style: none;
-        padding-bottom: 15px;
-        text-align: center;
+    & li {
+        margin: auto;
     }
 }
 
@@ -48,16 +46,7 @@
         & .accordion-content {
             width: 80%;
             margin: auto;
-        
-            
-        
-            & p {
-                text-align: center;
-            }
-        
-            & ul {
-                text-align: center;
-            }
+            align-content: center;
         }
         }
     }

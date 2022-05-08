@@ -30,12 +30,16 @@ function closeModal() {
     backdrop.classList.remove('open');
 }
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-// navbarToggle.addEventListener('click', function () {
-//     mobileNav.classList.add('open')
-//     backdrop.classList.add('open');
+// Navbar toggle
+const toggleBtn = document.getElementsByClassName('navbar-toggle')[0]
+const navbarNav = document.getElementsByClassName('navbar-nav')[0]
 
-// })
+const navbarLink = document.getElementsByClassName('navbar-link')[0]
+
+toggleBtn.addEventListener('click', () => {
+    navbarNav.classList.toggle('open');
+});
+
 
 /*  Accordion script  */
 const accordionSelector = document.querySelectorAll(".accordion");

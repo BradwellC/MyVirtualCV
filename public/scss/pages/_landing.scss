@@ -1,5 +1,5 @@
 .logo {
-    padding: 10rem 0;
+    padding: 2rem 0 7rem;
 
     & img {
         margin: 0;
@@ -70,7 +70,7 @@
 .qualifications {
     height: fit-content;
     text-align: center;
-    padding: 10rem 1.5rem;
+    padding: 3rem 1.5rem 5rem;
 
     background: $blueviolet;
 
@@ -79,7 +79,8 @@
     }
 
     #accordion {
-        padding-top: 1rem;
+        margin: 1rem auto;
+        width: 90%;
     }
 
 }
@@ -108,12 +109,7 @@
 @include view(phablet) {
 
     .logo {
-
-        padding: 5.5rem 0;
-
-        img {
-            margin: 5.5rem auto;
-        }
+        padding: 2rem 0 7rem;
     }
 
     .about-me {
@@ -144,6 +140,12 @@
         }
     }
 
+    .qualifications {
+        #accordion {
+            width: 60%;
+        }
+    }
+
     .contact-me {
         gap: 2rem;
 
@@ -163,6 +165,10 @@
 }
 
 @include view(tablet) {
+
+    .logo {
+        padding: 2rem 0 7rem;
+    }
 
     .projects {
         grid-template-columns: repeat(3, 1fr);
