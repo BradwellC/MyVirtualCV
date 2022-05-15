@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
-* {
-  
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -13,8 +16,7 @@ html {
 
 body {
   font-family: $main-font;
-  font-size: 62.5%;
-  background: $violet;
+  // font-size: 62.5%;
   margin: 0;
   padding: 0;
 }

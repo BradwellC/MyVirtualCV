@@ -37,8 +37,6 @@
   }
 
   &-nav {
-    height: 100%;
-
     display: none;
     flex-direction: column;
     opacity: 0;
@@ -62,7 +60,7 @@
     &:hover {
       background-color: $blueviolet;
     }
-  } 
+  }
 }
 
 @include view(tablet) {

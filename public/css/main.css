@@ -32,7 +32,7 @@
 }
 
 .bg-blueviolet {
-  background-color: #8a2be2;
+  background-color: #8a2be2 !important;
 }
 
 .bg-fuchsia {
@@ -44,11 +44,11 @@
 }
 
 .bg-dark-blue {
-  background-color: #5643fa;
+  background-color: #050A30 !important;
 }
 
 .bg-dark {
-  background: #000;
+  background-color: #000;
   color: #fff;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .text-blueviolet {
-  color: #8a2be2;
+  color: #8a2be2 !important;
 }
 
 .text-fuchsia {
@@ -104,7 +104,11 @@
   color: #2998ff;
 }
 
-* {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -114,8 +118,6 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  font-size: 62.5%;
-  background: #5C038C;
   margin: 0;
   padding: 0;
 }
@@ -323,7 +325,6 @@ a {
   color: #8a2be2;
 }
 .navbar-nav {
-  height: 100%;
   display: none;
   flex-direction: column;
   opacity: 0;
@@ -761,6 +762,79 @@ a {
   padding: 30px;
 }
 
+.dropdown-menu {
+  list-style: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+}
+.dropdown-item a {
+  color: #fff;
+}
+
+.sidenav {
+  grid-column: sidebar-start/sidebar-end;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media only screen and (max-width: 62.5em) {
+  .sidenav {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.sidenav-toggle {
+  position: absolute;
+  top: 2rem;
+  left: 2.5rem;
+  width: 3rem;
+  cursor: pointer;
+}
+.sidenav-toggle i {
+  display: flex;
+  width: 100%;
+  font-size: 3rem;
+  color: #fff;
+}
+.sidenav-toggle i:hover {
+  color: #8a2be2;
+}
+.sidenav-nav {
+  vertical-align: middle;
+  display: flex;
+}
+.sidenav-item {
+  display: block;
+  padding: 2rem;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+}
+
+.main-section {
+  margin: 2rem 10rem;
+}
+
+.side-logo {
+  grid-column: full-start/full-end;
+  padding: 2rem 0 7rem;
+}
+.side-logo img {
+  margin: 0;
+  width: 650px;
+  margin: auto;
+}
+
 .container {
   display: block;
   width: 100%;
@@ -768,9 +842,32 @@ a {
 }
 
 .container-flex {
+  display: flex;
+  flex-direction: column;
   display: block;
   width: 100%;
   margin: 0 auto;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-rows: 100% -webkit-min-content;
+  grid-template-rows: 100% min-content;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 62.5em) {
+  .container-grid {
+    grid-template-rows: 100% -webkit-min-content 40vw -webkit-min-content;
+    grid-template-rows: 100% min-content 40vw min-content;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 50em) {
+  .container-grid {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }
 
 .main-footer {
@@ -807,7 +904,7 @@ a {
   }
 }
 .logo {
-  padding: 2rem 0 7rem;
+  padding: 7rem 0 7rem;
 }
 .logo img {
   margin: 0;
@@ -841,6 +938,13 @@ a {
   display: -ms-grid;
   display: -moz-grid;
   grid-template-columns: 1fr;
+  padding: 4rem 0 5rem;
+}
+.projects .section-title {
+  margin: auto;
+}
+.projects-content {
+  margin: auto;
 }
 
 .work-experience {
@@ -904,8 +1008,12 @@ a {
     margin: auto;
   }
 
-  .projects {
+  .projects-content {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-text {
+    padding: 2rem;
   }
 
   .work-experience .section-title {
@@ -917,7 +1025,7 @@ a {
   }
 
   .qualifications #accordion {
-    width: 60%;
+    width: 80%;
   }
 
   .contact-me {
@@ -941,6 +1049,17 @@ a {
   }
 
   .projects {
+    padding: 4rem 0;
+  }
+  .projects .section-title {
+    margin: auto;
+  }
+  .projects-content {
+    -moz-columns: 2;
+         columns: 2;
+    margin: auto;
+  }
+  .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 

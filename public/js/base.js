@@ -4,9 +4,6 @@ const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal-close');
 const planBtn = document.querySelectorAll('#modal-btn');
 
-const navbarToggle = document.querySelector('.navbar-toggle');
-const mobileNav = document.querySelector('.mobile-navbar');
-
 for (var i = 0; i < planBtn.length; i++) {
     planBtn[i].addEventListener('click', function () {
         modal.classList.add('open');
@@ -31,12 +28,18 @@ function closeModal() {
 }
 
 // Navbar toggle
-const toggleBtn = document.getElementsByClassName('navbar-toggle')[0]
-const navbarNav = document.getElementsByClassName('navbar-nav')[0]
+const navToggle = document.querySelector('.navbar-toggle');
+const navbarNav = document.querySelector('.navbar-nav');
 
-const navbarLink = document.getElementsByClassName('navbar-link')[0]
+const navbarLink = document.querySelector('.navbar-link');
 
-toggleBtn.addEventListener('click', () => {
+// document.onclick = function (e) {
+//     if (e.target.class !== 'navbar-nav') {
+//         navbarNav.classList.remove('open');
+//     }
+// }
+
+navToggle.addEventListener('click', function () {
     navbarNav.classList.toggle('open');
 });
 
