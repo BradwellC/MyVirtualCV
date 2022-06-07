@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -19,6 +20,8 @@ body {
   // font-size: 62.5%;
   margin: 0;
   padding: 0;
+
+  
 }
 
 .open {
@@ -30,3 +33,7 @@ body {
 ul {
   list-style: none;
 }
+
+// section {
+//   scroll-margin-top: 0;
+// }

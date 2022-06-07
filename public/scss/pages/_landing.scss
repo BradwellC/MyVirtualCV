@@ -42,8 +42,8 @@
 
     @include grid();
     grid-template-columns: 1fr;
-
-    padding: 4rem 0 5rem;
+    padding: 5rem 0;
+    vertical-align: middle;
 
     & .section-title {
         margin: auto;
@@ -51,6 +51,8 @@
 
     &-content {
         margin: auto;
+        text-align: center;
+        padding: 0 2rem;
     }
 }
 
@@ -123,7 +125,7 @@
 
     .about-me {
         grid-template-columns: repeat(2, 1fr);
-        
+
         &_left {
             margin: auto;
         }
@@ -160,6 +162,7 @@
     }
 
     .qualifications {
+        padding: 5rem 0;
         #accordion {
             width: 80%;
         }

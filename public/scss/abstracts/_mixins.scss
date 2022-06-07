@@ -26,6 +26,16 @@
   display: flex;
 }
 
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow() {
+  display: flex;
+  flex-direction: row;
+}
+
 @mixin grid() {
   display: grid;
   display: -ms-grid;

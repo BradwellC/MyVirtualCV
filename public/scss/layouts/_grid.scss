@@ -1,17 +1,7 @@
 .container {
-  display: block;
-  width: 100%;
-  padding: .5rem 2rem;
-}
-
-.container-flex {
-  display: flex;
-  flex-direction: column;
-
-  display: block;
-
-  width: 100%;
+  max-width: 110rem;
   margin: 0 auto;
+  padding: 1.2rem 3rem;
 }
 
 .container-grid {

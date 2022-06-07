@@ -114,6 +114,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -294,26 +295,26 @@ a {
 }
 
 .navbar {
-  background-color: #050A30;
-  display: flex;
-  flex-direction: column;
+  background-color: #000C66;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-.navbar-brand {
-  padding: 1rem;
-  font-size: 1.3rem;
-  color: #8a2be2;
-  text-transform: uppercase;
-  font-weight: bolder;
+.navbar-flex {
+  display: flex;
+  flex-direction: column;
 }
-.navbar-toggle {
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem;
-  width: 2rem;
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #9400d3;
+  font-weight: bold;
 }
 .navbar-toggle i {
   display: flex;
@@ -322,42 +323,40 @@ a {
   color: #fff;
 }
 .navbar-toggle i:hover {
-  color: #8a2be2;
+  color: #9400d3;
 }
 .navbar-nav {
   display: none;
   flex-direction: column;
-  opacity: 0;
-  margin: 0;
-  padding: 0;
 }
 .navbar-item {
-  list-style: none;
-  align-items: center;
+  margin: 2rem 0;
+  text-align: center;
 }
 .navbar-link {
   display: block;
-  text-decoration: none;
+  padding: 0.8rem 4rem;
   color: #fff;
-  padding: 0.5rem 1rem;
-}
-.navbar-link:hover {
-  background-color: #8a2be2;
+  background-color: #9400d3;
+  text-align: center;
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .navbar {
+@media (min-width: 898px) {
+  .navbar-header {
+    display: block;
+  }
+  .navbar-flex {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
   }
   .navbar-toggle {
     display: none;
   }
   .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    opacity: 1;
+    height: auto;
   }
 }
 .form-group {
@@ -420,8 +419,6 @@ a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
 }
 
 .form-check-input[type=checkbox] {
@@ -836,17 +833,9 @@ a {
 }
 
 .container {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 2rem;
-}
-
-.container-flex {
-  display: flex;
-  flex-direction: column;
-  display: block;
-  width: 100%;
+  max-width: 110rem;
   margin: 0 auto;
+  padding: 1.2rem 3rem;
 }
 
 .container-grid {
@@ -938,13 +927,16 @@ a {
   display: -ms-grid;
   display: -moz-grid;
   grid-template-columns: 1fr;
-  padding: 4rem 0 5rem;
+  padding: 5rem 0;
+  vertical-align: middle;
 }
 .projects .section-title {
   margin: auto;
 }
 .projects-content {
   margin: auto;
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .work-experience {
@@ -1024,6 +1016,9 @@ a {
     width: 75%;
   }
 
+  .qualifications {
+    padding: 5rem 0;
+  }
   .qualifications #accordion {
     width: 80%;
   }
