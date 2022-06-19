@@ -97,7 +97,7 @@
 
 }
 
-.contact-me {
+.contact {
     display: grid;
     display: -ms-grid;
     display: -moz-grid;
@@ -106,14 +106,13 @@
 
     padding: 2rem;
 
-    & .card {
-        width: 100%;
-        order: 1;
-    }
-    
-    & form {
+    &-form {
         order: 2;
-        margin-top: 1.3rem;
+    }
+
+    &-content {
+        order: 1;
+        text-align: center;
     }
     
 }
@@ -188,20 +187,20 @@
         }
     }
 
-    .contact-me {
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
 
-        & .card {
-            grid-column: 2 / 3;
-            width: 80%;
-            order: 2;
+        &-form {
+            grid-column: 1;
         }
 
-        & form {
-            grid-column: 1 / 2;
-            margin-top: 1.3rem;
-            width: 80%;
-            order: 1;
+        &-content {
+            grid-column: 2;
+
+            margin: auto;
+            text-align: center;
         }
     }
 }
@@ -227,9 +226,23 @@
     //         grid-template-columns: repeat(3, 1fr);
     //     }
     // }
+}
 
-    .contact-me {
-        display: flex;
-        flex-direction: row;
-    }
+@include view(desktop) {
+    .contact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+    
+            &-form {
+                grid-column: 1 /3;
+            }
+    
+            &-content {
+                grid-column: 3;
+    
+                margin: auto;
+                text-align: center;
+            }
+        }
 }

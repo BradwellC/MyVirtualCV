@@ -310,7 +310,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 100;
-  border-bottom: 2px solid #8a2be2;
+  border-bottom: 3px solid #8a2be2;
 }
 .navbar-header {
   display: flex;
@@ -392,7 +392,7 @@ a {
   font-size: 1.1rem;
   display: block;
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.5rem;
   color: #212529;
   background-color: #f0eeee;
   background-clip: padding-box;
@@ -1035,20 +1035,19 @@ ul.breadcrumb li a {
   width: 90%;
 }
 
-.contact-me {
+.contact {
   display: grid;
   display: -ms-grid;
   display: -moz-grid;
   grid-template-columns: 1fr;
   padding: 2rem;
 }
-.contact-me .card {
-  width: 100%;
-  order: 1;
-}
-.contact-me form {
+.contact-form {
   order: 2;
-  margin-top: 1.3rem;
+}
+.contact-content {
+  order: 1;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1105,28 +1104,37 @@ ul.breadcrumb li a {
     align-content: center;
   }
 
-  .contact-me {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  .contact-me .card {
-    grid-column: 2/3;
-    width: 80%;
-    order: 2;
+  .contact-form {
+    grid-column: 1;
   }
-  .contact-me form {
-    grid-column: 1/2;
-    margin-top: 1.3rem;
-    width: 80%;
-    order: 1;
+  .contact-content {
+    grid-column: 2;
+    margin: auto;
+    text-align: center;
   }
 }
 @media (min-width: 889px) {
   .logo {
     padding: 4rem 0 7rem;
   }
-
-  .contact-me {
-    display: flex;
-    flex-direction: row;
+}
+@media (min-width: 1200px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .contact-form {
+    grid-column: 1/3;
+  }
+  .contact-content {
+    grid-column: 3;
+    margin: auto;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

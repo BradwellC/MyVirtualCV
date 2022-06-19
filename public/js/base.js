@@ -1,20 +1,4 @@
-const modal = document.getElementById("myModal");
-const btn = document.getElementById("myBtn");
-const modalSpan = document.getElementsByClassName("close")[0];
 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-modalSpan.onclick = function () {
-    modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 // Navbar toggle
 const navToggle = document.querySelector('.navbar-toggle');
@@ -67,44 +51,20 @@ $(document).ready(function () {
     });
 });
 
-// Form JS
-const usernameEl = document.querySelector('#username');
-const emailEl = document.querySelector('#email');
-const passwordEl = document.querySelector('#password');
-const confirmPasswordEl = document.querySelector('#password-confirm');
-const signUpForm = document.querySelector('#signup');
+const modal = document.getElementById("myModal");
+const modalBtn = document.getElementById("myBtn");
+const modalSpan = document.getElementsByClassName("close")[0];
 
-// Reuseable functions
-const required = value => value === '' ? false : true;
-const between = (length, min, max) => length < min || length > max ? false : true;
-const emailValid = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-};
-const securePassword = (password) => {
-    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-    return re.test(password);
-};
-
-const showError = (input, message) => {
-    const formGroup = input.parentElement;
-
-    formGroup.classList.remove('success');
-    formGroup.classList.add('error');
-
-    const error = formGroup.querySelector('small');
-    error.textContent = message;
+modalBtn.onclick = function () {
+    modal.style.display = "block";
 }
 
-const showSuccess = (input) => {
-    // get the form-field element
-    const formGroup = input.parentElement;
+modalSpan.onclick = function () {
+    modal.style.display = "none";
+}
 
-    // remove the error class
-    formGroup.classList.remove('error');
-    formGroup.classList.add('success');
-
-    // hide the error message
-    const error = formGroup.querySelector('small');
-    error.textContent = '';
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
