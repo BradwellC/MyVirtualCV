@@ -1,0 +1,94 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $navy-blue;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+
+  border-bottom: 3px solid $blueviolet;
+  
+  &-header {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  &-brand {
+    font-size: 1.2rem;
+    padding: .8rem 1.2rem;
+
+    color: $light;
+    text-transform: uppercase;
+
+    background-color: $blueviolet;
+  }
+
+  &-toggle {
+    font-size: 1.3rem;
+    padding: .8rem 1.2rem;
+    cursor: pointer;
+    color: $light;
+
+    &:hover {
+      color: $blueviolet;
+    }
+  
+  }
+
+  &-nav {
+    display: none;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &-item {
+    padding: .8rem 1rem;
+  }
+
+  &-link {
+    display: block;
+    color: $light;
+    text-align: center;
+
+    align-items: center;
+
+    &:hover {
+      border-bottom: 2px solid $blueviolet;
+    }
+  }
+}
+
+@include view(desktop) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-toggle {
+      display: none;
+    }
+
+    &-nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+  }
+}
+
+
+.navbar-active {
+  display: flex !important;
+}
