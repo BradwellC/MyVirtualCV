@@ -1,30 +1,19 @@
-const backdrop = document.querySelector('.backdrop');
-const modal = document.querySelector('.modal');
+const modal = document.getElementById("myModal");
+const btn = document.getElementById("myBtn");
+const modalSpan = document.getElementsByClassName("close")[0];
 
-const modalClose = document.querySelector('.modal-close');
-const planBtn = document.querySelectorAll('#modal-btn');
-
-for (var i = 0; i < planBtn.length; i++) {
-    planBtn[i].addEventListener('click', function () {
-        modal.classList.add('open');
-        backdrop.classList.add('open');
-    })
+btn.onclick = function () {
+    modal.style.display = "block";
 }
 
-backdrop.addEventListener('click', function () {
-    mobileNav.classList.remove('open');
-    closeModal();
-})
-
-if (modalClose) {
-    modalClose.addEventListener('click', closeModal);
+modalSpan.onclick = function () {
+    modal.style.display = "none";
 }
 
-function closeModal() {
-    if (modal) {
-        modal.classList.remove('open');
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
-    backdrop.classList.remove('open');
 }
 
 // Navbar toggle
@@ -33,18 +22,12 @@ const navbarNav = document.querySelector('.navbar-nav');
 
 const navbarLink = document.querySelector('.navbar-link');
 
-// document.onclick = function (e) {
-//     if (e.target.class !== 'navbar-nav') {
-//         navbarNav.classList.remove('open');
-//     }
-// }
-
 navToggle.addEventListener('click', function () {
-    navbarNav.classList.toggle('open');
+    navbarNav.classList.toggle('navbar-active');
 });
 
 
-/*  Accordion script  */
+// Accordion script 
 const accordionSelector = document.querySelectorAll(".accordion");
 accordionSelector.forEach((accordion) => {
     accordion.onclick = function () {
@@ -83,3 +66,45 @@ $(document).ready(function () {
         } // End if
     });
 });
+
+// Form JS
+const usernameEl = document.querySelector('#username');
+const emailEl = document.querySelector('#email');
+const passwordEl = document.querySelector('#password');
+const confirmPasswordEl = document.querySelector('#password-confirm');
+const signUpForm = document.querySelector('#signup');
+
+// Reuseable functions
+const required = value => value === '' ? false : true;
+const between = (length, min, max) => length < min || length > max ? false : true;
+const emailValid = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+};
+const securePassword = (password) => {
+    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    return re.test(password);
+};
+
+const showError = (input, message) => {
+    const formGroup = input.parentElement;
+
+    formGroup.classList.remove('success');
+    formGroup.classList.add('error');
+
+    const error = formGroup.querySelector('small');
+    error.textContent = message;
+}
+
+const showSuccess = (input) => {
+    // get the form-field element
+    const formGroup = input.parentElement;
+
+    // remove the error class
+    formGroup.classList.remove('error');
+    formGroup.classList.add('success');
+
+    // hide the error message
+    const error = formGroup.querySelector('small');
+    error.textContent = '';
+}

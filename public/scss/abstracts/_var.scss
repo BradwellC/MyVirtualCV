@@ -26,6 +26,7 @@ $main-pink: #ff1b68;
 $rose-pink: #ffcede;
 
 $purple: #896FBC;
+$pruple-light: #cb99c9;
 $mediumpurple: #9370db;
 $blueviolet: #8a2be2;
 $dark-violet: #9400d3;
@@ -65,3 +66,8 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
+
+$magic-number: 0.09719;
+/* tan(11°)/2 */
+$content-width: 100vw;
+$skew-padding: calc(var(--content-width) * var(--magic-number));

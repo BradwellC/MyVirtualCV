@@ -1,6 +1,6 @@
 .accordion {
     width: 100%;
-    background-color: $navy-blue;
+    background-color: $form-checkbox;
     text-align: center;
     border: none;
     padding: 15px 20px;
@@ -8,22 +8,38 @@
     cursor: pointer;
     transition: background-color 0.2s linear;
     color: $light;
+
+    border-bottom: 1px solid $dark-blue;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: $light;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.open:after {
+    content: "\2212";
 }
 
 .accordion:hover,
 .accordion:focus {
     outline: none;
-    background-color: $dark-blue;
+    background-color: $navy-blue;
 }
 
 .accordion-content {
-    background-color: $navy-blue;
+    background-color: $form-checkbox;
     padding: 0 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
     text-align: center;
     color: $light;
+
+    border-bottom: 1px solid $dark-blue;
 
     & p {
         margin: auto;
@@ -34,19 +50,3 @@
         margin: auto;
     }
 }
-
-@include view(phablet) {
-    .qualifications {
-
-        & .section-title {
-            margin: auto;
-        }
-
-        & .accordion,
-        & .accordion-content {
-            width: 80%;
-            margin: auto;
-            align-content: center;
-        }
-        }
-    }

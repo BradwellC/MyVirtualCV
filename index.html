@@ -13,48 +13,45 @@
 
     <script src="https://kit.fontawesome.com/00645e87e4.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="stylesheet" href="./public/css/main.css" />
   </head>
 
   <body>
-    <header class="navbar">
-      <div class="container navbar-flex">
+    <header>
+      <nav class="navbar">
         <div class="navbar-header">
           <div class="navbar-brand">MyVirtualCV</div>
-          <a href="#" class="navbar-toggle">
-            <i class="fa-solid fa-bars"></i>
-          </a>
+          <div class="navbar-toggle">
+            <i class="fa fa-bars"></i>
+          </div>
         </div>
-        <nav class="navbar-nav">
-          <ul>
-            <li class="navbar-item">
-              <a href="#" class="navbar-link">About Me</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="navbar-link">Projects</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="navbar-link">Work Experience</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="navbar-link">Qualififcations</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#" class="navbar-link">Contact Me</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="navbar-nav">
+          <li class="navbar-item">
+            <a href="#aboutme" class="navbar-link">About Me</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#projects" class="navbar-link">Projects</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#workexperience" class="navbar-link">Work Experience</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#qualifications" class="navbar-link">Qualifications</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link">Contact Me</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <div class="backdrop"></div>
-      <div class="modal">
-        <h1 class="modal-title">Contact Me</h1>
-        <div class="modal-body"></div>
-      </div>
-
-      <section class="logo">
+      <section id="home" class="logo">
         <img
           src="https://res.cloudinary.com/chrisbradwell12/image/upload/v1650456495/MyVirtualCV/img/IMG_0205_fk0max.png"
           alt="MyVirtualCV"
@@ -86,22 +83,19 @@
       </section>
 
       <section class="projects" id="projects">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-content">
-          <p class="projects-text">
-            Over the last year i have been learning to code within my free time
-            by teaching myself or taking courses from udemy. I am currently
-            going through all the courses and updating the styling to match this
-            webiste. The courses i have taken involve Node.js, PHP, React, CSS
-            and JS.
-          </p>
-          <p class="projects-text">
-            To go long with building the projects i have built this webiste and
-            the css template currently being used on here and server landing
-            page ive built as well. I decided to build the css template as a way
-            of learning more about css and it would be great training for me.
-          </p>
-        </div>
+        <h2 class="projects-title">My Projects</h2>
+        <p class="projects-text">
+          Over the last year i have been learning to code within my free time by
+          teaching myself or taking courses from udemy. I am currently going
+          through all the courses and updating the styling to match this
+          webiste. The courses i have taken involve Node.js, PHP, React, CSS and
+          JS.
+          <br /><br />
+          To go long with building the projects i have built this webiste and
+          the css template currently being used on here and server landing page
+          ive built as well. I decided to build the css template as a way of
+          learning more about css and it would be great training for me.
+        </p>
       </section>
 
       <section class="work-experience" id="workexperience">
@@ -143,23 +137,21 @@
             ant digital marketing that are apart of their yearly marketing
             plans. These areas included:
             <br /><br />
-            SEO - using keywords to to help all websites rank highly in google
-            search to increase the chances of someone seeing the page.
-            <br /><br />
-            Social Media - I would use content from web pages i created to build
-            tweet content plans - these tweets would include news articles,
-            videos or infographics. To increase the number of followers and
-            landing page visits.
-            <br /><br />
-            Website creation and maintenance - creating and maintaining
-            different websites, this would involve updating SEO keywords or
-            adding new landing pages and removing pages which aren't needed
-            anymore. These were created within wordpress which was built by an
-            outside agency.
-            <br /><br />
-            HTML programming - During the process of building a new website we
-            didnt use wordpress by i had helped the Digital manager create the
-            website using HTML, CSS and JS.
+            <span>SEO</span> - using keywords to to help all websites rank
+            highly in google search to increase the chances of someone seeing
+            the page. <br /><br />
+            <span>Social Media</span> - I would use content from web pages i
+            created to build tweet content plans - these tweets would include
+            news articles, videos or infographics. To increase the number of
+            followers and landing page visits. <br /><br />
+            <span>Website creation and maintenance</span> - creating and
+            maintaining different websites, this would involve updating SEO
+            keywords or adding new landing pages and removing pages which aren't
+            needed anymore. These were created within wordpress which was built
+            by an outside agency. <br /><br />
+            <span>HTML programming</span> - During the process of building a new
+            website we didnt use wordpress by i had helped the Digital manager
+            create the website using HTML, CSS and JS.
           </div>
         </div>
 
@@ -227,6 +219,11 @@
             </p>
           </div>
         </div>
+      </section>
+
+      <section class="contact">
+        <div class="contact-form"></div>
+        <div class="contact-content"></div>
       </section>
     </main>
 

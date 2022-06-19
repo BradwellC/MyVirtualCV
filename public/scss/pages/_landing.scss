@@ -1,5 +1,6 @@
 .logo {
-    padding: 7rem 0 7rem;
+    padding: 9rem 0 8rem;
+    align-items: center;
 
     & img {
         margin: 0;
@@ -10,56 +11,51 @@
 
 
 .about-me {
-    @include grid();
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
 
-    padding: 5rem 2rem;
+    background-color: $blue-light;
+    color: $light;
 
-    background: $navy-blue;
+    text-align: center;
+    padding: 7rem 3rem;
 
-    width: 100%;
+    h3 {
+        color: $light;
+    }
 
     &_left {
         margin: auto;
-        text-align: center;
     }
 
     &_right {
         margin: auto;
-        padding-top: 2rem;
-        text-align: center;
-
-        & span {
-            font-weight: bold;
-        }
     }
-
-    
 }
 
 
 
 .projects {
 
-    @include grid();
-    grid-template-columns: 1fr;
-    padding: 5rem 0;
-    vertical-align: middle;
+    margin: auto;
+    text-align: center;
 
-    & .section-title {
+    padding: 5rem 3rem;
+
+    &-title {
         margin: auto;
     }
 
-    &-content {
+    &-text {
         margin: auto;
-        text-align: center;
-        padding: 0 2rem;
     }
 }
 
 .work-experience {
 
     padding: 2rem 1.2rem;
-    background-color: $dark-blue;
+    background-color: $blue-light;
 
     h2 {
        text-align: center;
@@ -73,20 +69,25 @@
             li {
                 font-size: .9rem;
             }
+
+            span {
+                font-weight: bold;
+            }
         }
     }
 
 }
 
 .qualifications {
-    height: fit-content;
+    max-height: fit-content;
     text-align: center;
     padding: 3rem 1.5rem 5rem;
 
-    background: $blueviolet;
+    background-color: $indigo;
 
     .section-title {
         margin: 0 auto;
+        color: $light;
     }
 
     #accordion {
@@ -117,10 +118,36 @@
     
 }
 
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: $grey-dark-3;
+    }
+
+    .about-me, .main-footer, .accordion, .accordion-content {
+        background-color: $navy-blue;
+    }
+
+    .accordion:hover,
+    .accordion:focus {
+        background-color: $dark-blue;
+    }
+
+    .work-experience {
+        background-color: $navy-blue;
+    }
+
+    .qualifications {
+        background-color: $blueviolet;
+    }
+
+
+}
+
 @include view(phablet) {
 
     .logo {
-        padding: 2rem 0 7rem;
+        padding: 4rem 0 7rem;
     }
 
     .about-me {
@@ -132,20 +159,6 @@
 
         &_right {
             margin: auto;
-        }
-    }
-
-    .projects {
-
-
-        &-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        &-text {
-            padding: 2rem;
-
         }
     }
 
@@ -162,9 +175,16 @@
     }
 
     .qualifications {
-        padding: 5rem 0;
-        #accordion {
+
+        & .section-title {
+            margin: auto;
+        }
+
+        & .accordion,
+        & .accordion-content {
             width: 80%;
+            margin: auto;
+            align-content: center;
         }
     }
 
@@ -189,24 +209,24 @@
 @include view(tablet) {
 
     .logo {
-        padding: 2rem 0 7rem;
+        padding: 4rem 0 7rem;
     }
 
-    .projects {
-        padding: 4rem 0;
-        & .section-title {
-            margin: auto;
-        }
+    // .projects {
+    //     padding: 4rem 0;
+    //     & .section-title {
+    //         margin: auto;
+    //     }
 
-        &-content {
-            columns: 2;
-            margin: auto;
-        }
+    //     &-content {
+    //         columns: 2;
+    //         margin: auto;
+    //     }
 
-        &-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
+    //     &-grid {
+    //         grid-template-columns: repeat(3, 1fr);
+    //     }
+    // }
 
     .contact-me {
         display: flex;
