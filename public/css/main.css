@@ -1124,6 +1124,15 @@ ul.breadcrumb li a {
   }
 }
 @media (min-width: 1200px) {
+  .qualifications .section-title {
+    margin: auto;
+  }
+  .qualifications .accordion, .qualifications .accordion-content {
+    width: 60%;
+    margin: auto;
+    align-content: center;
+  }
+
   .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

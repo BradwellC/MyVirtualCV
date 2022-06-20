@@ -229,6 +229,21 @@
 }
 
 @include view(desktop) {
+
+    .qualifications {
+    
+            & .section-title {
+                margin: auto;
+            }
+    
+            & .accordion,
+            & .accordion-content {
+                width: 60%;
+                margin: auto;
+                align-content: center;
+            }
+        }
+
     .contact {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
