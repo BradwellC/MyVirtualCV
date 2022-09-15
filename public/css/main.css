@@ -1003,6 +1003,11 @@ ul.breadcrumb li a {
   text-align: center;
   padding: 5rem 3rem;
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
 .projects-title {
   margin: auto;
 }
@@ -1063,20 +1068,16 @@ ul.breadcrumb li a {
   body {
     background-color: #333;
   }
-
   .about-me, .main-footer, .accordion, .accordion-content {
     background-color: #000C66;
   }
-
   .accordion:hover,
 .accordion:focus {
     background-color: #050A30;
   }
-
   .work-experience {
     background-color: #000C66;
   }
-
   .qualifications {
     background-color: #8a2be2;
   }
@@ -1085,7 +1086,6 @@ ul.breadcrumb li a {
   .logo {
     padding: 4rem 0 7rem;
   }
-
   .about-me {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1095,7 +1095,6 @@ ul.breadcrumb li a {
   .about-me_right {
     margin: auto;
   }
-
   .work-experience .section-title {
     margin: 0 auto;
     padding: 2rem 0;
@@ -1103,7 +1102,6 @@ ul.breadcrumb li a {
   .work-experience .card {
     width: 75%;
   }
-
   .qualifications .section-title {
     margin: auto;
   }
@@ -1112,7 +1110,6 @@ ul.breadcrumb li a {
     margin: auto;
     align-content: center;
   }
-
   .contact {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1141,7 +1138,6 @@ ul.breadcrumb li a {
     margin: auto;
     align-content: center;
   }
-
   .contact {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
